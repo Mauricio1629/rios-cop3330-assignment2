@@ -1,3 +1,7 @@
+/*
+ *  UCF COP3330 Summer 2021 Assignment 2 Solution
+ *  Copyright 2021 Mauricio Rios
+ */
 package oop.assignment2.ex25;
 
 import java.util.Arrays;
@@ -47,16 +51,12 @@ public class ex25_solution {
     }
 
     public void printStrength(int passwordLevel) {
-        switch(passwordLevel) {
-            case 0: System.out.print("ERROR: WHAT DID YOU DO???");
-                    break;
-            case 1: System.out.print("is a very weak password.");
-                    break;
-            case 2: System.out.print("is a weak password.");
-                    break;
-            case 3: System.out.print("is a strong password.");
-                    break;
-            case 4: System.out.print("is a very strong password.");
+        switch (passwordLevel) {
+            case 0 -> System.out.print("ERROR: WHAT DID YOU DO???");
+            case 1 -> System.out.print("is a very weak password.");
+            case 2 -> System.out.print("is a weak password.");
+            case 3 -> System.out.print("is a strong password.");
+            case 4 -> System.out.print("is a very strong password.");
         }
     }
 }

@@ -1,5 +1,6 @@
 package oop.assignment2.ex24;
 
+import oop.assignment2.ex25.ex25_solution;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -33,5 +34,4 @@ class ex24_solutionTest {
 
         assertFalse(actual);
     }
-
 }

@@ -1,3 +1,7 @@
+/*
+ *  UCF COP3330 Summer 2021 Assignment 2 Solution
+ *  Copyright 2021 Mauricio Rios
+ */
 package oop.assignment2.ex34;
 
 import java.util.Scanner;
@@ -6,10 +10,16 @@ public class ex34_solution {
     private static final Scanner in = new Scanner(System.in);
     public static void main(String[] args) {
         ex34_solution app = new ex34_solution();
-        String[] array = new String[] {"John Smith","Jackie Jackson","Chris Jones","Amanda Cullen","Jeremy Goodwin"};
-        app.showList(array);
-        array = app.editArray(array);
-        app.showList(array);
+        String[] nameList = new String[] {"John Smith","Jackie Jackson","Chris Jones","Amanda Cullen","Jeremy Goodwin"};
+        app.showList(nameList);
+        String name = app.getNameToRemove();
+        nameList = app.editArray(nameList, name);
+        app.showList(nameList);
+    }
+
+    public String getNameToRemove() {
+        System.out.print("\nEnter an employee name to remove: ");
+        return in.nextLine();
     }
 
     public void showList(String[] array1) {
@@ -20,16 +30,12 @@ public class ex34_solution {
         }
     }
 
-    public String[] editArray(String[] array) {
+    public String[] editArray(String[] array, String name) {
         int size = array.length;
         int index = size;
-        String name;
-        System.out.print("\nEnter an employee name to remove: ");
-        name = in.nextLine();
-        System.out.print("\n");
 
         for(int i=0; i<size; i++) {
-            if(array[i].equals(name)) {
+            if(array[i].equalsIgnoreCase(name)) {
                 index = i;
             }
         }

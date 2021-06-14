@@ -1,3 +1,7 @@
+/*
+ *  UCF COP3330 Summer 2021 Assignment 2 Solution
+ *  Copyright 2021 Mauricio Rios
+ */
 package oop.assignment2.ex36;
 
 import java.util.ArrayList;
@@ -9,7 +13,6 @@ public class ex36_solution {
         ex36_solution app = new ex36_solution();
         ArrayList<Integer> numberList;
         numberList = app.getNumbers();
-        //DO ALL THESE FUNCTIONS
         double avg = app.average(numberList);
         int  maxNumber = app.max(numberList);
         int minNumber = app.min(numberList);
@@ -21,7 +24,6 @@ public class ex36_solution {
         ArrayList<Integer> numberList = new ArrayList<>();
         System.out.print("Enter a number: ");
         String input;
-        //CLEAN THIS UP SEE IF THERE IS A BETTER WAY
         do{
             input = in.next();
             if(input.equalsIgnoreCase("done")) {

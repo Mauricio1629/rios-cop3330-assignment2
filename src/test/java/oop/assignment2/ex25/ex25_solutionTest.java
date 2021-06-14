@@ -41,4 +41,13 @@ class ex25_solutionTest {
 
         assertEquals(4,output);
     }
+
+    @Test
+    void passwordValidator_test_with_no_input_or_spacebar__will_return_0() {
+        ex25_solution app = new ex25_solution();
+
+        int output = app.passwordValidator("");
+
+        assertEquals(0,output);
+    }
 }

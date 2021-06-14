@@ -1,3 +1,7 @@
+/*
+ *  UCF COP3330 Summer 2021 Assignment 2 Solution
+ *  Copyright 2021 Mauricio Rios
+ */
 package oop.assignment2.ex38;
 
 import java.util.ArrayList;
@@ -27,7 +31,7 @@ public class ex38_solution {
         }
     }
 
-    private Integer[] filterEvenNumbers(String[] list) {
+    public Integer[] filterEvenNumbers(String[] list) {
         ArrayList<Integer> newList = new ArrayList<>();
         for (String s : list) {
             int number = Integer.parseInt(s);

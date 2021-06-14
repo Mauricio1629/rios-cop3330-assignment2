@@ -1,3 +1,7 @@
+/*
+ *  UCF COP3330 Summer 2021 Assignment 2 Solution
+ *  Copyright 2021 Mauricio Rios
+ */
 package oop.assignment2.ex31;
 
 import java.util.Scanner;
@@ -8,7 +12,8 @@ public class ex31_solution {
         oop.assignment2.ex31.ex31_solution app = new oop.assignment2.ex31.ex31_solution();
         int restingPulse = app.getPulse();
         int age = app.getAge();
-        app.printTable(restingPulse, age);
+        String output = app.getTable(restingPulse, age);
+        app.printOutput(output);
     }
 
     public int getPulse() {
@@ -41,14 +46,20 @@ public class ex31_solution {
         return age;
     }
 
-    public void printTable(int restingPulse, int age) {
+    public String getTable(int restingPulse, int age) {
         int rate;
-        System.out.printf("Resting Pulse: %d\tAge: %d\n", restingPulse, age);
-        System.out.printf("%1s %5s %1s\n", "Intensity","|","Rate");
-        System.out.println("--------------|----------");
+        StringBuilder table = new StringBuilder();
+        table.append(String.format("Resting Pulse: %d\tAge: %d\n", restingPulse, age));
+        table.append(String.format("%1s %5s %1s\n", "Intensity","|","Rate"));
+        table.append("--------------|----------\n");
         for(int intensity = 55; intensity<= 95; intensity +=5) {
             rate = (((220 - age) - restingPulse) *intensity/100) +restingPulse;
-            System.out.printf("%s%s  %10s %1s bpm\n", intensity,"%","|", rate);
+            table.append(String.format("%s%s  %10s %1s bpm\n", intensity,"%","|", rate));
         }
+        return table.toString();
+    }
+
+    public void printOutput(String output) {
+        System.out.print(output);
     }
 }
